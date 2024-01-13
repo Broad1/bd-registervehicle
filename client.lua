@@ -7,7 +7,7 @@ Enabled = Config.Enabled
 if Enabled then
     for k, loc  in ipairs(Config.Locations) do
         CreateThread(function()
-            local model = "a_m_m_indian_01"
+            local model = Config.Model
             RequestModel(model)
             while not HasModelLoaded(model) do
                 Wait(0)
@@ -32,7 +32,7 @@ if Enabled then
                             platenumber = DMVRegister[2]
     
                             TriggerServerEvent('bdrv:finishmenu', vehiclename, platenumber)
-                            if Config.QB then
+                            if Config.QB and Config.ChargePlayer then
                                 TriggerServerEvent("bdrv:ChargePlayerMoney")
                             end
                         end,
