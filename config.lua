@@ -2,8 +2,10 @@ Config = {}
 
 Config.Model = "a_m_m_indian_01"
 Config.Locations = {
-    vector4(1803.79, 3669.00, 34.12, 300),
-    vector4(-63.72, -1097.98, 26.30, 280)
+    vector4(1817.86, 3673.83, 34.71, 115),
+    vector4(2825.16, 4730.58, 48.63, 279),
+    vector4(1542.72, 816.13, 77.66, 61),
+    vector4(-379.16, -355.52, 31.65, 193),
 }
 Config.Debug = false
 Config.Enabled = true

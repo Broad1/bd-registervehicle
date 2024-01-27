@@ -1,18 +1,26 @@
 
-debug = Config.Debug
-Enabled = Config.Enabled
+
+Locations = {
+    vector4(-435.21, 1097.85, 329.77, 330),
+    vector4(1817.86, 3673.83, 34.71, 115),
+    vector4(2825.16, 4730.58, 48.63, 279),
+    vector4(1542.72, 816.13, 77.66, 61),
+    vector4(-379.16, -355.52, 31.65, 193),
+    vector4(-51.27, -1107.49, 26.44, 174)
+}
 
 
-
-if Enabled then
-    for k, loc  in ipairs(Config.Locations) do
+    for k, loc  in ipairs(Locations) do
         CreateThread(function()
-            local model = Config.Model
+            local model = "s_m_m_fiboffice_01"
             RequestModel(model)
             while not HasModelLoaded(model) do
                 Wait(0)
             end
-            local entity = CreatePed(0, model, loc.x, loc.y, loc.z, loc.h, false, false)
+            local entity = CreatePed(0, model, loc.x, loc.y, loc.z - 1, loc.w, false, false)
+            FreezeEntityPosition(entity, true)
+            SetEntityInvincible(entity, true)
+            SetEntityCollision(entity, true, false)
             exports['qb-target']:AddTargetEntity(entity, {
                 options = {
                     {
@@ -32,17 +40,17 @@ if Enabled then
                             platenumber = DMVRegister[2]
     
                             TriggerServerEvent('bdrv:finishmenu', vehiclename, platenumber)
-                            if Config.QB and Config.ChargePlayer then
+           
                                 TriggerServerEvent("bdrv:ChargePlayerMoney")
-                            end
+                     
                         end,
                     }
                 },
-                distance = 1,
+                distance = 2,
             })
         end)
     end
-end
+
 
 
 
