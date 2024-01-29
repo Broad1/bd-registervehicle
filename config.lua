@@ -1,7 +1,7 @@
 Config = {}
 
 Config.Model = "s_m_m_fiboffice_01"
-Config.Debug = true
+Config.Debug = false
 Config.Enabled = true
 
 Config.Locations = {
@@ -11,7 +11,6 @@ Config.Locations = {
     vector4(1542.72, 816.13, 77.66, 61),
     vector4(-379.16, -355.52, 31.65, 193),
     vector4(-51.27, -1107.49, 26.44, 174),
-    vector4(1835.76, 3661.42, 33.94, 268.34),
 }
 Config.QB = true
 -- Config.ESX = TOO COME SOON 
@@ -21,5 +20,4 @@ Config.Standalone = false
 ]]
 Config.ChargePlayer = true
 Config.Price = 200 -- Dollars
-Config.CustomAdditions = "bkrp" --- DO NOT TOUCH UNLESS TOLD OTHERWISE
--- Config.CA = "bkrp"
+Config.CustomAdditions = false --- DO NOT TOUCH UNLESS TOLD OTHERWISE
