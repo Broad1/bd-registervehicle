@@ -1,7 +1,5 @@
-Config = {}
-Debug = true
+
 local QBCore = exports['qb-core']:GetCoreObject()
-local player = QBCore.Functions.GetPlayer(source)
 
 
 RegisterNetEvent("bdrv:ChargePlayerMoney", function ()
@@ -43,3 +41,24 @@ AddEventHandler("bdrv:finishmenu", function (arg1, arg2)
 
   
 end)
+
+if Config.CustomAdditions == "bkrp" then
+    RegisterServerEvent("bdrv:CustomAdditions:bkrp_pubcop_setjob", function ()
+        local player = QBCore.Functions.GetPlayer(source)
+        local pjob = player.PlayerData.job.name
+
+        if Config.Debug then
+            print("Player's Job is " .. pjob)
+        end
+      
+        if pjob  == "pubcop" then
+            return
+        else 
+            player.Functions.SetJob("pubcop", 1)
+        end
+
+        
+
+    end)
+
+end
