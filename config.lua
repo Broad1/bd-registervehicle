@@ -3,6 +3,7 @@ Config = {}
 Config.Model = "s_m_m_fiboffice_01"
 Config.Debug = false
 Config.Enabled = true
+Config.CustomAdditions = false
 
 Config.Locations = {
     vector4(-435.21, 1097.85, 329.77, 330),
@@ -11,6 +12,7 @@ Config.Locations = {
     vector4(1542.72, 816.13, 77.66, 61),
     vector4(-379.16, -355.52, 31.65, 193),
     vector4(-51.27, -1107.49, 26.44, 174),
+    vector4(1836.27, 3662.03, 33.9, 131.29),
 }
 Config.QB = true
 -- Config.ESX = TOO COME SOON 
